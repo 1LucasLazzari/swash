@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+  font-family: "Open Sans", sans-serif;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0px;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1,h2,h3,p{
+  margin: 0;
+}
+.margin-60{
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-escola{
+  max-width: 350px;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.grid-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  justify-items: end;
+}
+
+.conheca{
+  margin-top: 60px;
+}
+h1{
+  font-size: 5rem;
+  line-height: 1.1;
+}
+.grid-2 h2{
+  font-size: 2rem;
+  text-align: end;
+  font-weight: 500;
+}
+.oque h1{
+  margin-bottom: 60px;
+}
+
+.oque{
+  margin-top: 120px;
+}
+
+
+.produto{
+  margin-top: 120px;
+}
+.produto h2{
+  font-size: 2rem;
+  text-align: start;
+   font-weight: 500;
+}
+
+.quatro-colunas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 80px 0;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card img {
+  display: block;
+  margin: 0 auto 10px; /* centraliza horizontalmente */
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .card p {
+      font-size: 1.2rem;
+    }
+
+
+
+.rodape {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: left;
+    }
+
+    .rodape p {
+      font-size: 2rem;
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+
+    @media (max-width: 1800px) {
+      .produto h2{
+      font-size: 1.5rem;
+    }
+    .grid-2 h2{
+      font-size: 1.5rem;
+
+}
+    }
+      
+
+    @media (max-width: 1300px) {
+  .margin-60 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .grid,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .grid-3{
+    justify-items: center;
+  }
+
+  .grid-2 h2,
+  .produto h2 {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .logo-escola {
+    max-width: 200px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .rodape p {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo {
+    max-width: 220px;
+  }
+
+  .logo-escola {
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.4;
+  }
+  .produto h2{
+    font-size: 1rem;
+    text-align: center;
+  }
+   .grid-2 h2{
+    font-size: 1rem;
+    text-align: center;
+   }
+
+  .nav a {
+    font-size: 1rem;
+  }
+
+  .grid img,
+  .grid-2 img,
+  .grid-3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .rodape p {
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+
+
+}
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 120px;
+  height: 120px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-fixo img {
+  width: 60px;
+  height: 60px;
+  filter: invert(1);
+}
+
+@media (max-width: 400px){
+  .whatsapp-fixo {
+  width: 80px;
+  height: 80px;
+}
+
+
+.whatsapp-fixo img {
+  width: 35px;
+  height: 35px;
+}
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease; /* para a leve ampliação */
+}
+
+.card:hover {
+  transform: scale(1.05); /* aumenta o card inteiro suavemente */
+}
+
+.card h3, .card p {
+  transition: font-size 0.3s ease; /* suaviza o aumento da fonte */
+}
+
+.card:hover h3 {
+  font-size: 1.3em; /* um pouco maior que 1.2em */
+}
+
+.card:hover p {
+  font-size: 1.3rem; /* aumenta o texto também */
+}
+
+.card img {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* transição da imagem */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* aumenta a imagem suavemente */
+}
+.card img,
+.grid img,
+.grid-2 img,
+.grid-3 img {
+  transition: transform 0.4s ease;
+}
+.card img:hover,
+.grid img:hover,
+.grid-2 img:hover,
+.grid-3 img:hover {
+  transform: scale(1.03);
+}
+
+
+
+
