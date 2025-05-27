@@ -3,12 +3,17 @@
   font-family: "Open Sans", sans-serif;
   
 }
+body, html {
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
 }
 body{
   margin: 0px;
-  overflow-x: hidden;
+}
+h1,h2,h3,p{
+  margin: 0;
 }
 img{
   max-width: 100%;
@@ -19,8 +24,8 @@ ul{
   padding: 0;
   list-style: none;
 }
-h1,h2,h3,p{
-  margin: 0;
+h2,p{
+  color: #061d3b;
 }
 .margin-60{
   margin-left: 60px;
@@ -56,8 +61,12 @@ h1,h2,h3,p{
 .conheca{
   margin-top: 60px;
 }
+.titulo{
+  font-size: 7rem;
+  line-height: 1.1;
+}
 h1{
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1.1;
 }
 .grid-2 h2{
@@ -66,7 +75,7 @@ h1{
   font-weight: 500;
 }
 .oque h1{
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .oque{
@@ -76,6 +85,9 @@ h1{
 
 .produto{
   margin-top: 120px;
+}
+.produto h1{
+  margin-bottom: 20px;
 }
 .produto h2{
   font-size: 2rem;
@@ -116,7 +128,6 @@ h1{
 
 .rodape {
       background: #1a1a1a;
-      color: #fff;
       padding: 30px 20px;
       text-align: left;
     }
@@ -125,7 +136,15 @@ h1{
       font-size: 2rem;
       margin-left: 60px;
       margin-right: 60px;
+      color: #fff;
     }
+
+    @media (max-width: 1800px) {
+     .titulo {
+      font-size: 6rem;
+  }
+
+}
 
     @media (max-width: 1800px) {
       .produto h2{
@@ -133,15 +152,22 @@ h1{
     }
     .grid-2 h2{
       font-size: 1.5rem;
+    }
+     .titulo {
+      font-size: 5rem;
+  }
 
 }
-    }
+   
       
 
     @media (max-width: 1300px) {
   .margin-60 {
     margin-left: 30px;
     margin-right: 30px;
+  }
+    .titulo {
+    font-size: 5rem;
   }
 
   .grid,
@@ -184,6 +210,11 @@ h1{
     gap: 20px;
   }
 
+   .titulo {
+    font-size: 3rem;
+    text-align: center; /* se quiser */
+  }
+
   .logo {
     max-width: 220px;
   }
@@ -215,8 +246,6 @@ h1{
   .nav a {
     font-size: 1rem;
   }
-
-  .grid img,
   .grid-2 img,
   .grid-3 img {
     width: 100%;
@@ -332,14 +361,15 @@ h1{
   display: inline-block;
 }
 
-.sobreposta {
+.sobreposta{
   position: absolute;
   top: 90%;
-  right: -40%;
+  right: -60%;
   width: 150%;
   transform: rotate(30deg) translateY(-50%);
   z-index: 10;
   pointer-events: none;
+  max-width: none;
 }
 
 
