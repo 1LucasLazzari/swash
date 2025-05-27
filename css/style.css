@@ -202,6 +202,7 @@ h1{
     margin-right: 30px;
     font-size: 1.5rem;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -245,11 +246,6 @@ h1{
 
   .nav a {
     font-size: 1rem;
-  }
-  .grid-2 img,
-  .grid-3 img {
-    width: 100%;
-    height: auto;
   }
 
   .card h3 {
@@ -296,12 +292,16 @@ h1{
   filter: invert(1);
 }
 
-@media (max-width: 400px){
+
+
+
+
+
+@media (max-width: 600px){
   .whatsapp-fixo {
   width: 80px;
   height: 80px;
 }
-
 
 .whatsapp-fixo img {
   width: 35px;
@@ -371,6 +371,37 @@ h1{
   pointer-events: none;
   max-width: none;
 }
+
+.imagem-com-sobreposicao-2 {
+  position: relative; /* Garante que o filho .sobreposta se posicione em relação a esta div */
+  display: inline-block;
+}
+
+.sobreposta-2{
+  position: absolute;
+  top: -40%;
+  right: 70%;
+  width: 150%;
+  transform: rotate(130deg) translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+  max-width: none;
+}
+@media (max-width: 1300px) {
+.sobreposta-2{
+  position: absolute;
+  top: -46%;
+  right: 70%;
+  width: 150%;
+  transform: rotate(130deg) translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+  max-width: none;
+}
+}
+
+
+
 
 
 
