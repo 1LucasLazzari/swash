@@ -1,270 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-*{
+
+* {
   font-family: "Open Sans", sans-serif;
-  
 }
+
 body, html {
   overflow-x: hidden;
+  margin: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
-body{
-  margin: 0px;
-}
-h1,h2,h3,p{
+
+h1, h2, h3, p {
   margin: 0;
 }
-img{
+
+img {
   max-width: 100%;
   display: block;
 }
-ul{
+
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-h2,p{
+
+h2, p {
   color: #061d3b;
 }
-.margin-60{
+
+/* Layout */
+
+.margin-60 {
   margin-left: 60px;
   margin-right: 60px;
 }
-.header{
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo-escola{
+
+.logo-escola {
   max-width: 350px;
 }
-.grid{
+
+.grid,
+.grid-2,
+.grid-3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
+}
+
+.grid {
   align-items: center;
 }
-.grid-2{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+
+.grid-2 {
   align-items: start;
 }
-.grid-3{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+
+.grid-3 {
   justify-items: end;
 }
 
-.conheca{
+/* Seções */
+
+.conheca {
   margin-top: 60px;
 }
-.titulo{
+
+.titulo {
   font-size: 7rem;
   line-height: 1.1;
 }
-h1{
+
+h1 {
   font-size: 4rem;
   line-height: 1.1;
 }
-.grid-2 h2{
+
+.grid-2 h2 {
   font-size: 2rem;
   text-align: end;
   font-weight: 500;
 }
-.oque h1{
-  margin-bottom: 20px;
-}
 
-.oque{
+.oque {
   margin-top: 120px;
 }
 
-
-.produto{
-  margin-top: 120px;
-}
-.produto h1{
+.oque h1 {
   margin-bottom: 20px;
 }
-.produto h2{
+
+.produto {
+  margin-top: 120px;
+}
+
+.produto h1 {
+  margin-bottom: 20px;
+}
+
+.produto h2 {
   font-size: 2rem;
   text-align: start;
-   font-weight: 500;
+  font-weight: 500;
 }
 
+/* Cards */
+
 .quatro-colunas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin: 80px 0;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 80px 0;
+}
 
-    .card {
-      border: 1px solid #ccc;
-      padding: 20px;
-      text-align: center;
-    }
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
-    .card img {
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
   display: block;
-  margin: 0 auto 10px; /* centraliza horizontalmente */
+  margin: 0 auto 10px;
   max-width: 100%;
   height: 150px;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-    .card p {
-      font-size: 1.2rem;
-    }
+.card:hover img {
+  transform: scale(1.1);
+}
 
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  transition: font-size 0.3s ease;
+}
 
+.card:hover h3 {
+  font-size: 1.3em;
+}
+
+.card p {
+  font-size: 1.2rem;
+  transition: font-size 0.3s ease;
+}
+
+/* Rodapé */
 
 .rodape {
-      background: #1a1a1a;
-      padding: 30px 20px;
-      text-align: left;
-    }
-
-    .rodape p {
-      font-size: 2rem;
-      margin-left: 60px;
-      margin-right: 60px;
-      color: #fff;
-    }
-
-    @media (max-width: 1800px) {
-     .titulo {
-      font-size: 6rem;
-  }
-
+  background: #1a1a1a;
+  padding: 30px 20px;
+  text-align: left;
 }
 
-    @media (max-width: 1800px) {
-      .produto h2{
-      font-size: 1.5rem;
-    }
-    .grid-2 h2{
-      font-size: 1.5rem;
-    }
-     .titulo {
-      font-size: 5rem;
-  }
-
-}
-   
-      
-
-    @media (max-width: 1300px) {
-  .margin-60 {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-    .titulo {
-    font-size: 5rem;
-  }
-
-  .grid,
-  .grid-2,
-  .grid-3 {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .grid-3{
-    justify-items: center;
-  }
-
-  .grid-2 h2,
-  .produto h2 {
-    text-align: left;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  .logo-escola {
-    max-width: 200px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  .rodape p {
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 1.5rem;
-  }
-
+.rodape p {
+  font-size: 2rem;
+  margin-left: 60px;
+  margin-right: 60px;
+  color: #fff;
 }
 
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-   .titulo {
-    font-size: 3rem;
-    text-align: center; /* se quiser */
-  }
-
-  .logo {
-    max-width: 220px;
-  }
-
-  .logo-escola {
-    max-width: 120px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  h2 {
-    font-size: 1rem;
-    text-align: left;
-    line-height: 1.4;
-  }
-  .produto h2{
-    font-size: 1rem;
-    text-align: center;
-  }
-   .grid-2 h2{
-    font-size: 1rem;
-    text-align: center;
-   }
-
-  .nav a {
-    font-size: 1rem;
-  }
-
-  .card h3 {
-    font-size: 1rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-  }
-
-  .rodape p {
-    font-size: 0.95rem;
-    text-align: center;
-    margin: 10px 0;
-  }
-
-
-
+.copyright {
+  text-align: center;
 }
+
+/* WhatsApp Fixo */
 
 .whatsapp-fixo {
   position: fixed;
@@ -292,76 +208,15 @@ h1{
   filter: invert(1);
 }
 
+/* Sobreposição */
 
-
-
-
-
-@media (max-width: 600px){
-  .whatsapp-fixo {
-  width: 80px;
-  height: 80px;
-}
-
-.whatsapp-fixo img {
-  width: 35px;
-  height: 35px;
-}
-}
-
-
-.card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease; /* para a leve ampliação */
-}
-
-.card:hover {
-  transform: scale(1.05); /* aumenta o card inteiro suavemente */
-}
-
-.card h3, .card p {
-  transition: font-size 0.3s ease; /* suaviza o aumento da fonte */
-}
-
-.card:hover h3 {
-  font-size: 1.3em; /* um pouco maior que 1.2em */
-}
-
-.card img {
-  display: block;
-  margin: 0 auto 10px;
-  max-width: 100%;
-  height: 150px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.card:hover img {
-  transform: scale(1.1);
-}
-.card img,
-.grid img,
-.grid-2 img,
-.grid-3 img {
-  transition: transform 0.4s ease;
-}
-.card img:hover,
-.grid img:hover,
-.grid-2 img:hover,
-.grid-3 img:hover {
-  transform: scale(1.03);
-}
-
-
-
-.imagem-com-sobreposicao {
-  position: relative; /* Garante que o filho .sobreposta se posicione em relação a esta div */
+.imagem-com-sobreposicao,
+.imagem-com-sobreposicao-2 {
+  position: relative;
   display: inline-block;
 }
 
-.sobreposta{
+.sobreposta {
   position: absolute;
   top: 90%;
   right: -60%;
@@ -372,12 +227,7 @@ h1{
   max-width: none;
 }
 
-.imagem-com-sobreposicao-2 {
-  position: relative; /* Garante que o filho .sobreposta se posicione em relação a esta div */
-  display: inline-block;
-}
-
-.sobreposta-2{
+.sobreposta-2 {
   position: absolute;
   top: -40%;
   right: 70%;
@@ -387,23 +237,172 @@ h1{
   pointer-events: none;
   max-width: none;
 }
+
+/* Transições de imagem */
+
+.card img,
+.grid img,
+.grid-2 img,
+.grid-3 img {
+  transition: transform 0.4s ease;
+}
+
+.card img:hover,
+.grid img:hover,
+.grid-2 img:hover,
+.grid-3 img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsividade */
+
+@media (max-width: 1800px) {
+  .titulo {
+    font-size: 6rem;
+  }
+
+  .produto h2,
+  .grid-2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .titulo {
+    font-size: 5rem;
+  }
+}
+
 @media (max-width: 1300px) {
-.sobreposta-2{
-  position: absolute;
-  top: -46%;
-  right: 70%;
-  width: 150%;
-  transform: rotate(130deg) translateY(-50%);
-  z-index: 10;
-  pointer-events: none;
-  max-width: none;
+  .margin-60 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .titulo {
+    font-size: 5rem;
+  }
+
+  .grid,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .grid-3 {
+    justify-items: center;
+  }
+
+  .grid-2 h2,
+  .produto h2 {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .logo-escola {
+    max-width: 200px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .rodape p {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 1.5rem;
+  }
+
+  .sobreposta-2 {
+    top: -46%;
+    right: 70%;
+  }
 }
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .titulo {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 220px;
+  }
+
+  .logo-escola {
+    max-width: 120px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .produto h2,
+  .grid-2 h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .nav a {
+    font-size: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .rodape p {
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .whatsapp-fixo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .whatsapp-fixo img {
+    width: 35px;
+    height: 35px;
+  }
 }
 
+/* animação */
+.brilho-suave {
+  animation: brilhoSuave 2s infinite ease-in-out;
+}
+.brilho-suave:hover {
+  color: #73cbe4;
+}
+a{
+  text-decoration: none;
+}
 
-
-
-
-
-
-
+@keyframes brilhoSuave {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
