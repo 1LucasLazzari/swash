@@ -8,6 +8,7 @@ html {
 }
 body{
   margin: 0px;
+  overflow-x: hidden;
 }
 img{
   max-width: 100%;
@@ -299,21 +300,17 @@ h1{
   font-size: 1.3em; /* um pouco maior que 1.2em */
 }
 
-.card:hover p {
-  font-size: 1.3rem; /* aumenta o texto também */
-}
-
 .card img {
   display: block;
   margin: 0 auto 10px;
   max-width: 100%;
   height: 150px;
   object-fit: contain;
-  transition: transform 0.3s ease; /* transição da imagem */
+  transition: transform 0.3s ease;
 }
 
 .card:hover img {
-  transform: scale(1.1); /* aumenta a imagem suavemente */
+  transform: scale(1.1);
 }
 .card img,
 .grid img,
@@ -327,6 +324,24 @@ h1{
 .grid-3 img:hover {
   transform: scale(1.03);
 }
+
+
+
+.imagem-com-sobreposicao {
+  position: relative; /* Garante que o filho .sobreposta se posicione em relação a esta div */
+  display: inline-block;
+}
+
+.sobreposta {
+  position: absolute;
+  top: 90%;
+  right: -40%;
+  width: 150%;
+  transform: rotate(30deg) translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
 
 
 
