@@ -406,24 +406,3 @@ a{
     opacity: 0.4;
   }
 }
-.footer {
-  position: relative;
-  background-color: #000; /* sua cor de fundo */
-  overflow: visible; /* permite que a imagem ultrapasse o topo */
-  z-index: 1;
-}
-
-.rodape {
-  position: relative; /* importante para posicionar o .sobreposta-3 em relação a este bloco */
-  padding-top: 50px; /* adiciona espaço interno para a imagem sobreposta, evita que ela empurre o conteúdo */
-}
-
-.sobreposta-3 {
-  position: absolute;
-  top: -40px; /* sobe a imagem para ficar visível sobre o footer */
-  left: 50%;
-  transform: translateX(-50%) rotate(130deg); /* ajuste a rotação conforme seu layout */
-  width: 150%;
-  pointer-events: none;
-  z-index: 2;
-}
